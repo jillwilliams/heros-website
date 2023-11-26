@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heroes Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Consolas&family=Rancho&family=Caveat&family=Creepster&family=Quintessential&family=Fruktur&family=Rye&family=UnifrakturMaguntia&family=Kranky&family=Nosifer&family=Noto+Sans+Rubic&family=Noto+Color+Emoji&family=Dancing+Script&family=Fuggles&family=Indie+Flower&family=Kalam&family=Montserrat:wght@100&family=Permanent+Marker&family=Poppins&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!-- keep this -->
+        <script src="https://kit.fontawesome.com/9f71dab2a2.js" crossorigin="anonymous"></script>
+        <!-- keep this -->
+        <link rel="stylesheet" href="./styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <section>
+            <header>
+                <a href="#" class="logo">
+                    Heroes
+                </a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="navigation">
+                    <li><a href="#" style="--i:1;">Home</a></li>
+                    <li><a href="#" style="--i:2;">Characters</a></li>
+                    <li><a href="#" style="--i:3;">Movies</a></li>
+                    <li><a href="#" style="--i:4;">Games</a></li>
+                    <li><a href="#" style="--i:5;">More</a></li>
+                </ul>
+            </header>
+            <div class="container">
+                <div class="box" style="--i:3;">
+                    <div class="imgbox">
+                        <img src="images/img1_5.jpg">
+                    </div>
+                </div>
+                <div class="box" style="--i:4;">
+                    <div class="imgbox">
+                        <img src="images/img2_5.jpg">
+                    </div>
+                </div>
+                <div class="box" style="--i:5;">
+                    <div class="imgbox">
+                        <img src="images/img3_5.jpg">
+                    </div>
+                </div>
+                <div class="box" style="--i:6;">
+                    <div class="imgbox">
+                        <img src="images/img4_5.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <ul class="sci">
+                    <li><a href="#" style="--i:9;">Facebook</a></li>
+                    <li><a href="#" style="--i:8;">Twitter</a></li>
+                    <li><a href="#" style="--i:7;">Instagram</a></li>
+                </ul>
+                <p class="copyrightText">Mathgeek2023</p>
+            </div>
+        </section>
+
+        <script>
+            let imgbox = document.querySelectorAll('.imgbox');
+            imgbox.forEach(popup => popup.addEventListener('click', () => {
+                popup.classList.toggle('active');
+            }))
+            function toggleMenu() {
+                const menuToggle = document.querySelector('.toggle');
+                const navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
